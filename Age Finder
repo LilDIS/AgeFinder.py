@@ -1,0 +1,13 @@
+import datetime
+def getAges(years_of_birth): 
+    now = datetime.datetime.now()
+    year = (now.year)
+    age = []    
+    for numbers in years_of_birth:
+        if numbers < year:
+            age.append(year - numbers)
+    return age
+        
+        
+years_of_birth= [1996,1997,2000,2005,2002]    
+print (getAges(years_of_birth))
